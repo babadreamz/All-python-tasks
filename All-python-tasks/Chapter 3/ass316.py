@@ -1,4 +1,3 @@
-#count = 0
 largest =  float("-inf")
 second_largest =  float("-inf")
 for count in range (1,11):
