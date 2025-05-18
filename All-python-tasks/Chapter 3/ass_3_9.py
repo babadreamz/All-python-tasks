@@ -1,3 +1,10 @@
+
+first_num = 0
+second_num  = 0
+third_num = 0
+fourth_num = 0
+fifth_num = 0
+
 for digits in  range(1):
 	
 	digit = int(input("Enter numbers: "))

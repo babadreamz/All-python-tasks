@@ -6,8 +6,8 @@ biggest = float("-inf")
 
 for number in range(4):
 	num = int (input("Enter a number "))
-	sum = num + sum
-	product = product * num
+	sum += num
+	product *= num
 	average = sum/4
 	if num > biggest:
 		biggest = num

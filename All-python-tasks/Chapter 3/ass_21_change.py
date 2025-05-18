@@ -1,8 +1,27 @@
-dollar_amount = float (input("Enter your dollar amount: "))
-if dollar_amount < 0 or dollar_amount > 1:
-	print('Invalid amount, must be between $0 and $1')
-	dollar_amount = dollar_amount * 100
-	change_quarters = dollar_amount / 25
-	change_dimes = dollar_amount / 10
-	change_pennines = dollar_amount / 100
-	print(f"quarters {change_quarters}, dimes {change_dimes}, pennies, {change_pennines}")
+purchase_price = float(input("Enter purchase price: "))
+if purchase_price > 1.00 or purchase_price < 0:
+	print("Invalid Price");
+else : 
+	change = round((1.00 - purchase_price) * 100)
+	
+	quarters = change // 25
+	change %= 25
+
+	dimes = change // 10
+	change %= 10
+
+	nickels = change // 5
+	change %= 5
+
+	pennies = change
+	
+	print("Your change is: ")
+	if quarters :
+		print(f"{quarters} quarter{'s' if quarters > 1 else ' '}")
+	if dimes: 
+		print(f"{dimes} dimes{'s' if dimes > 1 else ' '}")
+	if nickels:
+		print(f"{nickels} nickels{'s' if nickels > 1 else ' '}")
+	if pennies:
+		print(f"{pennies} pennies{'s' if pennies > 1 else ' '}")
+
