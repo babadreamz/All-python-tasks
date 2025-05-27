@@ -11,4 +11,7 @@ class TestCube(TestCase):
 		expected = 1000
 		self.assertEqual(actual, expected)
 	def test_that_cube_function_work_between_1_and_10(self):
-		self.assertEqual(cube.get_cube(12), "Invalid number")
+		self.assertRaises(ValueError, cube.get_cube, 14)
+		self.assertRaises(ValueError, cube.get_cube, 13)
+	def test_that_cube_function_work_with_negative_numbers(self):
+		self.assertRaises(ValueError, cube.get_cube, -8)
