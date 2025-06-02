@@ -20,9 +20,9 @@ def delete_task(index):
 
 '''
 def mark_completed(task_done):
-	task_1 = int(task_done)
-	marked_task = tasks(task_done)
-	task_1
+	tasks_1 = int(task_done)
+	marked_task = tasks_list[task_done] + [X]
+	
 '''
 
 
