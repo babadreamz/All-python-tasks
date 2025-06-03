@@ -1,8 +1,9 @@
 import random
+import time
 count = 0
 count_correct = 0
 count_wrong = 0
-
+start_time = time.time()
 while True:
 	number_1 = random.randint(1, 10)
 	number_2 = random.randint(1, 10)
@@ -33,4 +34,7 @@ while True:
 		break;
 	
 print(f"The score is {count_correct}/{count}" )
-				
+
+end_time = time.time()
+total_time = end_time - start_time
+print(f"The total time is {total_time:.2f} seconds")
