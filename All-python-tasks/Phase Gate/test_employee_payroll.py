@@ -1,6 +1,6 @@
 import employee_payroll
 from unittest import TestCase
-class TestCube(TestCase):
+class TestPayroll(TestCase):
 	def test_employee_payroll_exists(self):
 		employee_payroll.employee_details("name", "no_of_hours", "hourly_pay", "fed_tax", "state_tax")
 
@@ -72,7 +72,7 @@ class TestCube(TestCase):
 		employee_payroll.employee_details("Hilary", 10, 9.7, 0.2, 0.09 )
 		input_searched = employee_payroll.update_payroll("hilary")
 		actual = input_searched["name"]
-		expected = "Hilary"
+		expected = {"name": "Hilary", "no_of_hours": 10, "hourly_pay": 9.7, "fed_tax": 0.2, "state_tax": 0.09}
 		self.assertEqual(actual,expected )
 
 	def test_that_update_payroll_throws_error_if_not_matched(self):
